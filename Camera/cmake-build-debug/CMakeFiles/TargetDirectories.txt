@@ -1,0 +1,3 @@
+/Users/KsGin/Documents/OpenGL/Camera/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/Users/KsGin/Documents/OpenGL/Camera/cmake-build-debug/CMakeFiles/edit_cache.dir
+/Users/KsGin/Documents/OpenGL/Camera/cmake-build-debug/CMakeFiles/Camera.dir

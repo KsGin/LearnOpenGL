@@ -1,0 +1,1 @@
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  -g -Wl,-search_paths_first -Wl,-headerpad_max_install_names  -framework OPENGL CMakeFiles/Textures.dir/main.cpp.o CMakeFiles/Textures.dir/shader.cpp.o CMakeFiles/Textures.dir/texture.cpp.o  -o Textures /usr/local/lib/libglfw.dylib /usr/local/lib/libGLEW.dylib 

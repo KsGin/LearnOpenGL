@@ -1,0 +1,15 @@
+#version 420 core
+
+out vec4 FragColor;
+
+void main(){
+	if(gl_FragCoord.x > 960 && gl_FragCoord.y > 540){	//第一象限
+		FragColor = vec4(0.0f,0.0f,1.0f,1.0f);
+	} else if(gl_FragCoord.x < 960 && gl_FragCoord.y > 540) { //第二象限
+		FragColor = vec4(0.0f,1.0f,0.0f,1.0f);
+	} else if(gl_FragCoord.x < 960 && gl_FragCoord.y < 540) { //第三象限
+		FragColor = vec4(1.0f,0.0f,0.0f,1.0f);
+	} else if(gl_FragCoord.x > 960 && gl_FragCoord.y < 540) { //第四象限
+		FragColor = vec4(1.0f,1.0f,1.0f,1.0f);
+	}
+}

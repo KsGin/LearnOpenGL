@@ -1,0 +1,16 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/Users/KsGin/Documents/文稿 - KsGin/OpenGL/EmptyWindow/main.cpp
+iostream
+-
+GL/glew.h
+-
+GLFW/glfw3.h
+-
+
