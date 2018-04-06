@@ -1,0 +1,28 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/Users/KsGin/Documents/OpenGL/AdvanceLighting/Headers/Model.h
+
+/Users/KsGin/Documents/OpenGL/AdvanceLighting/Headers/Shader.h
+
+/Users/KsGin/Documents/OpenGL/AdvanceLighting/Sources/Model.cpp
+../Headers/Model.h
+/Users/KsGin/Documents/OpenGL/AdvanceLighting/Headers/Model.h
+
+/Users/KsGin/Documents/OpenGL/AdvanceLighting/Sources/Shader.cpp
+../Headers/Shader.h
+/Users/KsGin/Documents/OpenGL/AdvanceLighting/Headers/Shader.h
+
+/Users/KsGin/Documents/OpenGL/AdvanceLighting/main.cpp
+GL/glew.h
+-
+GLFW/glfw3.h
+-
+iostream
+-
+
