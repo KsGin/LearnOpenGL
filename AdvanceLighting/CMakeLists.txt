@@ -3,15 +3,11 @@ project(AdvanceLighting)
 
 set(CMAKE_CXX_STANDARD 11)
 
-AUX_SOURCE_DIRECTORY(./Sources SRC_SOURCES)
-AUX_SOURCE_DIRECTORY(./Headers HRC_SOURCES)
-
 add_executable(
         AdvanceLighting main.cpp
-        ./Headers/Model.h
-        ./Headers/Shader.h
-        ./Sources/Model.cpp
-        ./Sources/Shader.cpp)
+        Headers/Shader.hpp
+        Headers/Camera.hpp
+)
 
 set(CMAKE_EXE_LINKER_FLAGS "${CMAKE_EXE_LINKER_FLAGS} -framework OPENGL")
 

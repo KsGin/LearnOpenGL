@@ -6,17 +6,29 @@
 
 #IncludeRegexTransform: 
 
-/Users/KsGin/Documents/OpenGL/AdvanceLighting/Headers/Model.h
+/Users/KsGin/Documents/OpenGL/AdvanceLighting/Headers/Camera.hpp
+GL/glew.h
+-
+glm/glm.hpp
+-
+glm/gtc/matrix_transform.hpp
+-
+vector
+-
 
-/Users/KsGin/Documents/OpenGL/AdvanceLighting/Headers/Shader.h
-
-/Users/KsGin/Documents/OpenGL/AdvanceLighting/Sources/Model.cpp
-../Headers/Model.h
-/Users/KsGin/Documents/OpenGL/AdvanceLighting/Headers/Model.h
-
-/Users/KsGin/Documents/OpenGL/AdvanceLighting/Sources/Shader.cpp
-../Headers/Shader.h
-/Users/KsGin/Documents/OpenGL/AdvanceLighting/Headers/Shader.h
+/Users/KsGin/Documents/OpenGL/AdvanceLighting/Headers/Shader.hpp
+glm/glm.hpp
+-
+string
+-
+fstream
+-
+sstream
+-
+iostream
+-
+GL/glew.h
+-
 
 /Users/KsGin/Documents/OpenGL/AdvanceLighting/main.cpp
 GL/glew.h
@@ -25,4 +37,8 @@ GLFW/glfw3.h
 -
 iostream
 -
+Headers/Shader.hpp
+/Users/KsGin/Documents/OpenGL/AdvanceLighting/Headers/Shader.hpp
+Headers/Camera.hpp
+/Users/KsGin/Documents/OpenGL/AdvanceLighting/Headers/Camera.hpp
 

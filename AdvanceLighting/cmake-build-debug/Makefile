@@ -123,60 +123,6 @@ AdvanceLighting/fast:
 	$(MAKE) -f CMakeFiles/AdvanceLighting.dir/build.make CMakeFiles/AdvanceLighting.dir/build
 .PHONY : AdvanceLighting/fast
 
-Sources/Model.o: Sources/Model.cpp.o
-
-.PHONY : Sources/Model.o
-
-# target to build an object file
-Sources/Model.cpp.o:
-	$(MAKE) -f CMakeFiles/AdvanceLighting.dir/build.make CMakeFiles/AdvanceLighting.dir/Sources/Model.cpp.o
-.PHONY : Sources/Model.cpp.o
-
-Sources/Model.i: Sources/Model.cpp.i
-
-.PHONY : Sources/Model.i
-
-# target to preprocess a source file
-Sources/Model.cpp.i:
-	$(MAKE) -f CMakeFiles/AdvanceLighting.dir/build.make CMakeFiles/AdvanceLighting.dir/Sources/Model.cpp.i
-.PHONY : Sources/Model.cpp.i
-
-Sources/Model.s: Sources/Model.cpp.s
-
-.PHONY : Sources/Model.s
-
-# target to generate assembly for a file
-Sources/Model.cpp.s:
-	$(MAKE) -f CMakeFiles/AdvanceLighting.dir/build.make CMakeFiles/AdvanceLighting.dir/Sources/Model.cpp.s
-.PHONY : Sources/Model.cpp.s
-
-Sources/Shader.o: Sources/Shader.cpp.o
-
-.PHONY : Sources/Shader.o
-
-# target to build an object file
-Sources/Shader.cpp.o:
-	$(MAKE) -f CMakeFiles/AdvanceLighting.dir/build.make CMakeFiles/AdvanceLighting.dir/Sources/Shader.cpp.o
-.PHONY : Sources/Shader.cpp.o
-
-Sources/Shader.i: Sources/Shader.cpp.i
-
-.PHONY : Sources/Shader.i
-
-# target to preprocess a source file
-Sources/Shader.cpp.i:
-	$(MAKE) -f CMakeFiles/AdvanceLighting.dir/build.make CMakeFiles/AdvanceLighting.dir/Sources/Shader.cpp.i
-.PHONY : Sources/Shader.cpp.i
-
-Sources/Shader.s: Sources/Shader.cpp.s
-
-.PHONY : Sources/Shader.s
-
-# target to generate assembly for a file
-Sources/Shader.cpp.s:
-	$(MAKE) -f CMakeFiles/AdvanceLighting.dir/build.make CMakeFiles/AdvanceLighting.dir/Sources/Shader.cpp.s
-.PHONY : Sources/Shader.cpp.s
-
 main.o: main.cpp.o
 
 .PHONY : main.o
@@ -213,12 +159,6 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
 	@echo "... AdvanceLighting"
-	@echo "... Sources/Model.o"
-	@echo "... Sources/Model.i"
-	@echo "... Sources/Model.s"
-	@echo "... Sources/Shader.o"
-	@echo "... Sources/Shader.i"
-	@echo "... Sources/Shader.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"

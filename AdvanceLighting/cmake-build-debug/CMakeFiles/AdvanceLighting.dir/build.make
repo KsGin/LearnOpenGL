@@ -81,71 +81,19 @@ CMakeFiles/AdvanceLighting.dir/main.cpp.o.provides: CMakeFiles/AdvanceLighting.d
 CMakeFiles/AdvanceLighting.dir/main.cpp.o.provides.build: CMakeFiles/AdvanceLighting.dir/main.cpp.o
 
 
-CMakeFiles/AdvanceLighting.dir/Sources/Model.cpp.o: CMakeFiles/AdvanceLighting.dir/flags.make
-CMakeFiles/AdvanceLighting.dir/Sources/Model.cpp.o: ../Sources/Model.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/KsGin/Documents/OpenGL/AdvanceLighting/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/AdvanceLighting.dir/Sources/Model.cpp.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/AdvanceLighting.dir/Sources/Model.cpp.o -c /Users/KsGin/Documents/OpenGL/AdvanceLighting/Sources/Model.cpp
-
-CMakeFiles/AdvanceLighting.dir/Sources/Model.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/AdvanceLighting.dir/Sources/Model.cpp.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/KsGin/Documents/OpenGL/AdvanceLighting/Sources/Model.cpp > CMakeFiles/AdvanceLighting.dir/Sources/Model.cpp.i
-
-CMakeFiles/AdvanceLighting.dir/Sources/Model.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/AdvanceLighting.dir/Sources/Model.cpp.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/KsGin/Documents/OpenGL/AdvanceLighting/Sources/Model.cpp -o CMakeFiles/AdvanceLighting.dir/Sources/Model.cpp.s
-
-CMakeFiles/AdvanceLighting.dir/Sources/Model.cpp.o.requires:
-
-.PHONY : CMakeFiles/AdvanceLighting.dir/Sources/Model.cpp.o.requires
-
-CMakeFiles/AdvanceLighting.dir/Sources/Model.cpp.o.provides: CMakeFiles/AdvanceLighting.dir/Sources/Model.cpp.o.requires
-	$(MAKE) -f CMakeFiles/AdvanceLighting.dir/build.make CMakeFiles/AdvanceLighting.dir/Sources/Model.cpp.o.provides.build
-.PHONY : CMakeFiles/AdvanceLighting.dir/Sources/Model.cpp.o.provides
-
-CMakeFiles/AdvanceLighting.dir/Sources/Model.cpp.o.provides.build: CMakeFiles/AdvanceLighting.dir/Sources/Model.cpp.o
-
-
-CMakeFiles/AdvanceLighting.dir/Sources/Shader.cpp.o: CMakeFiles/AdvanceLighting.dir/flags.make
-CMakeFiles/AdvanceLighting.dir/Sources/Shader.cpp.o: ../Sources/Shader.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/KsGin/Documents/OpenGL/AdvanceLighting/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/AdvanceLighting.dir/Sources/Shader.cpp.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/AdvanceLighting.dir/Sources/Shader.cpp.o -c /Users/KsGin/Documents/OpenGL/AdvanceLighting/Sources/Shader.cpp
-
-CMakeFiles/AdvanceLighting.dir/Sources/Shader.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/AdvanceLighting.dir/Sources/Shader.cpp.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/KsGin/Documents/OpenGL/AdvanceLighting/Sources/Shader.cpp > CMakeFiles/AdvanceLighting.dir/Sources/Shader.cpp.i
-
-CMakeFiles/AdvanceLighting.dir/Sources/Shader.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/AdvanceLighting.dir/Sources/Shader.cpp.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/KsGin/Documents/OpenGL/AdvanceLighting/Sources/Shader.cpp -o CMakeFiles/AdvanceLighting.dir/Sources/Shader.cpp.s
-
-CMakeFiles/AdvanceLighting.dir/Sources/Shader.cpp.o.requires:
-
-.PHONY : CMakeFiles/AdvanceLighting.dir/Sources/Shader.cpp.o.requires
-
-CMakeFiles/AdvanceLighting.dir/Sources/Shader.cpp.o.provides: CMakeFiles/AdvanceLighting.dir/Sources/Shader.cpp.o.requires
-	$(MAKE) -f CMakeFiles/AdvanceLighting.dir/build.make CMakeFiles/AdvanceLighting.dir/Sources/Shader.cpp.o.provides.build
-.PHONY : CMakeFiles/AdvanceLighting.dir/Sources/Shader.cpp.o.provides
-
-CMakeFiles/AdvanceLighting.dir/Sources/Shader.cpp.o.provides.build: CMakeFiles/AdvanceLighting.dir/Sources/Shader.cpp.o
-
-
 # Object files for target AdvanceLighting
 AdvanceLighting_OBJECTS = \
-"CMakeFiles/AdvanceLighting.dir/main.cpp.o" \
-"CMakeFiles/AdvanceLighting.dir/Sources/Model.cpp.o" \
-"CMakeFiles/AdvanceLighting.dir/Sources/Shader.cpp.o"
+"CMakeFiles/AdvanceLighting.dir/main.cpp.o"
 
 # External object files for target AdvanceLighting
 AdvanceLighting_EXTERNAL_OBJECTS =
 
 AdvanceLighting: CMakeFiles/AdvanceLighting.dir/main.cpp.o
-AdvanceLighting: CMakeFiles/AdvanceLighting.dir/Sources/Model.cpp.o
-AdvanceLighting: CMakeFiles/AdvanceLighting.dir/Sources/Shader.cpp.o
 AdvanceLighting: CMakeFiles/AdvanceLighting.dir/build.make
 AdvanceLighting: /usr/local/lib/libglfw.dylib
 AdvanceLighting: /usr/local/lib/libGLEW.dylib
 AdvanceLighting: CMakeFiles/AdvanceLighting.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/KsGin/Documents/OpenGL/AdvanceLighting/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Linking CXX executable AdvanceLighting"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/KsGin/Documents/OpenGL/AdvanceLighting/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable AdvanceLighting"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/AdvanceLighting.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -154,8 +102,6 @@ CMakeFiles/AdvanceLighting.dir/build: AdvanceLighting
 .PHONY : CMakeFiles/AdvanceLighting.dir/build
 
 CMakeFiles/AdvanceLighting.dir/requires: CMakeFiles/AdvanceLighting.dir/main.cpp.o.requires
-CMakeFiles/AdvanceLighting.dir/requires: CMakeFiles/AdvanceLighting.dir/Sources/Model.cpp.o.requires
-CMakeFiles/AdvanceLighting.dir/requires: CMakeFiles/AdvanceLighting.dir/Sources/Shader.cpp.o.requires
 
 .PHONY : CMakeFiles/AdvanceLighting.dir/requires
 

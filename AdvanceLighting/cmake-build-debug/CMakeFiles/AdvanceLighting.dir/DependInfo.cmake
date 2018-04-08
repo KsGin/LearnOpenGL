@@ -4,8 +4,6 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/Users/KsGin/Documents/OpenGL/AdvanceLighting/Sources/Model.cpp" "/Users/KsGin/Documents/OpenGL/AdvanceLighting/cmake-build-debug/CMakeFiles/AdvanceLighting.dir/Sources/Model.cpp.o"
-  "/Users/KsGin/Documents/OpenGL/AdvanceLighting/Sources/Shader.cpp" "/Users/KsGin/Documents/OpenGL/AdvanceLighting/cmake-build-debug/CMakeFiles/AdvanceLighting.dir/Sources/Shader.cpp.o"
   "/Users/KsGin/Documents/OpenGL/AdvanceLighting/main.cpp" "/Users/KsGin/Documents/OpenGL/AdvanceLighting/cmake-build-debug/CMakeFiles/AdvanceLighting.dir/main.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "AppleClang")

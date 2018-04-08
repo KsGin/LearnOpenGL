@@ -82,16 +82,10 @@
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="/Users/KsGin/Documents/OpenGL/AdvanceLighting/Headers/Model.h">
+		<Unit filename="/Users/KsGin/Documents/OpenGL/AdvanceLighting/Headers/Camera.hpp">
 			<Option target="AdvanceLighting"/>
 		</Unit>
-		<Unit filename="/Users/KsGin/Documents/OpenGL/AdvanceLighting/Headers/Shader.h">
-			<Option target="AdvanceLighting"/>
-		</Unit>
-		<Unit filename="/Users/KsGin/Documents/OpenGL/AdvanceLighting/Sources/Model.cpp">
-			<Option target="AdvanceLighting"/>
-		</Unit>
-		<Unit filename="/Users/KsGin/Documents/OpenGL/AdvanceLighting/Sources/Shader.cpp">
+		<Unit filename="/Users/KsGin/Documents/OpenGL/AdvanceLighting/Headers/Shader.hpp">
 			<Option target="AdvanceLighting"/>
 		</Unit>
 		<Unit filename="/Users/KsGin/Documents/OpenGL/AdvanceLighting/main.cpp">

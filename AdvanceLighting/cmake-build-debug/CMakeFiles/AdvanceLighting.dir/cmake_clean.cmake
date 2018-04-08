@@ -1,7 +1,5 @@
 file(REMOVE_RECURSE
   "CMakeFiles/AdvanceLighting.dir/main.cpp.o"
-  "CMakeFiles/AdvanceLighting.dir/Sources/Model.cpp.o"
-  "CMakeFiles/AdvanceLighting.dir/Sources/Shader.cpp.o"
   "AdvanceLighting.pdb"
   "AdvanceLighting"
 )
