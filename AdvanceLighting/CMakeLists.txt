@@ -7,7 +7,8 @@ add_executable(
         AdvanceLighting main.cpp
         Headers/Shader.hpp
         Headers/Camera.hpp
-)
+        Headers/Texture.hpp
+        Headers/Model.hpp)
 
 set(CMAKE_EXE_LINKER_FLAGS "${CMAKE_EXE_LINKER_FLAGS} -framework OPENGL")
 

@@ -3,5 +3,8 @@
 
 CMakeFiles/AdvanceLighting.dir/main.cpp.o
  /Users/KsGin/Documents/OpenGL/AdvanceLighting/Headers/Camera.hpp
+ /Users/KsGin/Documents/OpenGL/AdvanceLighting/Headers/Model.hpp
  /Users/KsGin/Documents/OpenGL/AdvanceLighting/Headers/Shader.hpp
+ /Users/KsGin/Documents/OpenGL/AdvanceLighting/Headers/Texture.hpp
+ /Users/KsGin/Documents/OpenGL/AdvanceLighting/Headers/stb_image.h
  /Users/KsGin/Documents/OpenGL/AdvanceLighting/main.cpp

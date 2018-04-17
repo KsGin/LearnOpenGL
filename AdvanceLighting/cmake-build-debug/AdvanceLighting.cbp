@@ -85,7 +85,13 @@
 		<Unit filename="/Users/KsGin/Documents/OpenGL/AdvanceLighting/Headers/Camera.hpp">
 			<Option target="AdvanceLighting"/>
 		</Unit>
+		<Unit filename="/Users/KsGin/Documents/OpenGL/AdvanceLighting/Headers/Model.hpp">
+			<Option target="AdvanceLighting"/>
+		</Unit>
 		<Unit filename="/Users/KsGin/Documents/OpenGL/AdvanceLighting/Headers/Shader.hpp">
+			<Option target="AdvanceLighting"/>
+		</Unit>
+		<Unit filename="/Users/KsGin/Documents/OpenGL/AdvanceLighting/Headers/Texture.hpp">
 			<Option target="AdvanceLighting"/>
 		</Unit>
 		<Unit filename="/Users/KsGin/Documents/OpenGL/AdvanceLighting/main.cpp">

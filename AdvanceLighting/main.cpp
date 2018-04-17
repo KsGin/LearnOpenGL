@@ -4,6 +4,8 @@
 #include <iostream>
 #include "Headers/Shader.hpp"
 #include "Headers/Camera.hpp"
+#include "Headers/Texture.hpp"
+#include "Headers/Model.hpp"
 
 using namespace std;
 using namespace glm;
@@ -34,7 +36,6 @@ int main() {
     }
     glfwMakeContextCurrent(pWindow);
 
-
     glewExperimental = GL_TRUE;
     if (glewInit() != GLEW_OK) {
         cout << "Failed to init GLEW" << endl;
@@ -43,73 +44,26 @@ int main() {
 
     glfwSetKeyCallback(pWindow, KeyCallback);
 
-    static const GLfloat vertices[] = {
-            -1.0f, -1.0f, -1.0f,
-            -1.0f, -1.0f, 1.0f,
-            -1.0f, 1.0f, 1.0f,
-            1.0f, 1.0f, -1.0f,
-            -1.0f, -1.0f, -1.0f,
-            -1.0f, 1.0f, -1.0f,
-            1.0f, -1.0f, 1.0f,
-            -1.0f, -1.0f, -1.0f,
-            1.0f, -1.0f, -1.0f,
-            1.0f, 1.0f, -1.0f,
-            1.0f, -1.0f, -1.0f,
-            -1.0f, -1.0f, -1.0f,
-            -1.0f, -1.0f, -1.0f,
-            -1.0f, 1.0f, 1.0f,
-            -1.0f, 1.0f, -1.0f,
-            1.0f, -1.0f, 1.0f,
-            -1.0f, -1.0f, 1.0f,
-            -1.0f, -1.0f, -1.0f,
-            -1.0f, 1.0f, 1.0f,
-            -1.0f, -1.0f, 1.0f,
-            1.0f, -1.0f, 1.0f,
-            1.0f, 1.0f, 1.0f,
-            1.0f, -1.0f, -1.0f,
-            1.0f, 1.0f, -1.0f,
-            1.0f, -1.0f, -1.0f,
-            1.0f, 1.0f, 1.0f,
-            1.0f, -1.0f, 1.0f,
-            1.0f, 1.0f, 1.0f,
-            1.0f, 1.0f, -1.0f,
-            -1.0f, 1.0f, -1.0f,
-            1.0f, 1.0f, 1.0f,
-            -1.0f, 1.0f, -1.0f,
-            -1.0f, 1.0f, 1.0f,
-            1.0f, 1.0f, 1.0f,
-            -1.0f, 1.0f, 1.0f,
-            1.0f, -1.0f, 1.0f
-    };
+    glCullFace(GL_FRONT);
+    glEnable(GL_CULL_FACE);
+    glEnable(GL_PROGRAM_POINT_SIZE);
 
-    unsigned int vertexArrayObject, vertexBufferObject;
-    glGenBuffers(1, &vertexBufferObject);
-    glBindBuffer(GL_ARRAY_BUFFER, vertexBufferObject);
-    glBufferData(GL_ARRAY_BUFFER, sizeof(vertices), vertices, GL_STATIC_DRAW);
-
-    glGenVertexArrays(1, &vertexArrayObject);
-    glBindVertexArray(vertexArrayObject);
-    glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, sizeof(float) * 3, static_cast<void *>(0));
-    glEnableVertexAttribArray(0);
+    auto glslShader = Shader("../Shaders/ModelVertexShader.glsl", "../Shaders/ModelFragmentShader.glsl");
+    auto glslTex = Texture("../Resources/tex.tga" , false);
+    auto camera = Camera(glm::vec3(0.0f, 0.0f, 1.0f));
+    auto cube = Model("../Resources/cube.txt");
+    auto projection = glm::perspective(glm::radians(90.0f),(float)width / height, 0.1f, 100.0f);
+    auto view = camera.GetViewMatrix();
+    auto model = scale(glm::mat4(1.0f), glm::vec3(0.3f, 0.3f, 0.3f));
 
     unsigned int uboBlock;
     glGenBuffers(1, &uboBlock);
     glBindBuffer(GL_UNIFORM_BUFFER, uboBlock);
     glBufferData(GL_UNIFORM_BUFFER, sizeof(glm::mat4) * 2, nullptr, GL_STATIC_DRAW); // 分配152字节的内存
     glBindBuffer(GL_UNIFORM_BUFFER, 0);
-
-    glEnable(GL_PROGRAM_POINT_SIZE);
-    Shader glslShader("../Shaders/ModelVertexShader.glsl", "../Shaders/ModelFragmentShader.glsl");
-    Camera camera = Camera(glm::vec3(0.0f, 0.0f, 1.0f));
-
-    //bind 0
     const auto vpIndex = glGetUniformBlockIndex(glslShader.ID, "VP");
     glUniformBlockBinding(glslShader.ID, vpIndex, 0);
     glBindBufferBase(GL_UNIFORM_BUFFER, 0, uboBlock);
-
-    auto projection = glm::perspective(glm::radians(90.0f),(float)width / height, 0.1f, 100.0f);
-    auto view = camera.GetViewMatrix();
-    auto model = scale(glm::mat4(1.0f), glm::vec3(0.1f, 0.1f, 0.1f));
 
     glBufferSubData(GL_UNIFORM_BUFFER, 0, sizeof(glm::mat4), &projection);
     glBufferSubData(GL_UNIFORM_BUFFER, sizeof(glm::mat4), sizeof(glm::mat4), &view);
@@ -121,10 +75,12 @@ int main() {
         glClearColor(0.0f, 0.0f, 0.0f, 1.0f);
 
         glslShader.use();
+        glslTex.Use();
         model = glm::rotate(model , radians(1.0f) , vec3(0.0f , 1.0f , 0.0f));
         glslShader.setMat4("model", model);
-        glBindVertexArray(vertexArrayObject);
-        glDrawArrays(GL_TRIANGLES, 0, 36);
+        cube.Use();
+        //glDrawArrays(GL_TRIANGLES , 0 , 36);
+        glDrawElements(GL_TRIANGLES , cube.IndexCount() , GL_UNSIGNED_INT , 0);
 
         glfwSwapBuffers(pWindow);
     }
@@ -137,5 +93,4 @@ void KeyCallback(GLFWwindow *window, int key, int scancode, int action, int mode
     if (key == GLFW_KEY_ESCAPE && action == GLFW_PRESS) {
         glfwSetWindowShouldClose(window, GL_TRUE);
     }
-
 }
