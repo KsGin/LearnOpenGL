@@ -44,17 +44,17 @@ int main() {
 
     glfwSetKeyCallback(pWindow, KeyCallback);
 
-    glCullFace(GL_FRONT);
     glEnable(GL_CULL_FACE);
     glEnable(GL_PROGRAM_POINT_SIZE);
 
     auto glslShader = Shader("../Shaders/ModelVertexShader.glsl", "../Shaders/ModelFragmentShader.glsl");
     auto glslTex = Texture("../Resources/tex.tga" , false);
-    auto camera = Camera(glm::vec3(0.0f, 0.0f, 1.0f));
+    auto camera = Camera(glm::vec3(0.0f, 2.0f, 10.0f));
     auto cube = Model("../Resources/cube.txt");
+
     auto projection = glm::perspective(glm::radians(90.0f),(float)width / height, 0.1f, 100.0f);
     auto view = camera.GetViewMatrix();
-    auto model = scale(glm::mat4(1.0f), glm::vec3(0.3f, 0.3f, 0.3f));
+    auto model = glm::mat4(1.0f);
 
     unsigned int uboBlock;
     glGenBuffers(1, &uboBlock);
@@ -79,7 +79,7 @@ int main() {
         model = glm::rotate(model , radians(1.0f) , vec3(0.0f , 1.0f , 0.0f));
         glslShader.setMat4("model", model);
         cube.Use();
-        //glDrawArrays(GL_TRIANGLES , 0 , 36);
+        //glPolygonMode(GL_FRONT_AND_BACK , GL_LINE);
         glDrawElements(GL_TRIANGLES , cube.IndexCount() , GL_UNSIGNED_INT , 0);
 
         glfwSwapBuffers(pWindow);
